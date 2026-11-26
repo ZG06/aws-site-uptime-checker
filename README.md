@@ -1,0 +1,1 @@
+![AWS Architecture Diagram](https://i.imgur.com/FwUFlHw.jpeg "An AWS diagram showing the cloud infrastructure of the project")
