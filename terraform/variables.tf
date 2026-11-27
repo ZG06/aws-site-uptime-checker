@@ -16,6 +16,12 @@ variable "az2" {
   default     = "us-east-1b"
 }
 
+variable "daily_report_email" {
+  description = "Email for daily reports"
+  type        = string
+  sensitive   = true
+}
+
 variable "project_name" {
   description = "Project prefix used for resource naming and tags"
   type        = string

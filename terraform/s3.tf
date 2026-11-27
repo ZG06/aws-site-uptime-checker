@@ -1,6 +1,6 @@
 # S3 bucket for URLs
 resource "aws_s3_bucket" "url_storage_bucket" {
-  bucket = "${var.project_name}-url-storage-bucket"
+  bucket        = "${var.project_name}-url-storage-bucket"
   force_destroy = true # Allow terraform to destroy the bucket even with files inside
 
   tags = {
