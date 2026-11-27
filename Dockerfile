@@ -12,7 +12,7 @@ RUN go mod download
 COPY . .
 
 # Build
-RUN CGO_ENABLED=0 GOOS=linux go build -o site-checker main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o uptime-checker main.go
 
 
 # --- Stage 2: Minimal Runtime Stage ---
@@ -25,7 +25,7 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /app
 
 # Copy the compiled binary from Stage 1 into system PATH
-COPY --from=builder /app/site-checker /usr/local/bin/site-checker
+COPY --from=builder /app/uptime-checker /usr/local/bin/uptime-checker
 
 # Set the default entrypoint command to run the binary
-ENTRYPOINT ["site-checker"]
+ENTRYPOINT ["uptime-checker"]
